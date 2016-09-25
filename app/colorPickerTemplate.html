@@ -1,0 +1,8 @@
+<div class="color-picker" >
+  <div class="input" ng-click="openPalette()" style="background-color:{{ ngModel }}"></div>
+  <div class="pallete" ng-show="showPallete">
+    <div class="color" ng-repeat="color in colors track by color.code" 
+                       style="background-color:{{ color.code }}"
+                       ng-click="selectColor(color)"></div>
+  </div>
+</div>

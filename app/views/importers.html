@@ -1,0 +1,60 @@
+<div ng-include src="'views/header.html'"></div>
+
+<div class="row">
+  <div class="col-xs-3">
+    <div ng-include src="'views/sidenav.html'"></div>    
+  </div>
+
+  <div class="col-xs-9">
+    <div class="content">
+      <input type="file" nv-file-select="" uploader="uploader" />
+
+      <div class="col-md-9" style="margin-bottom: 40px">
+         <div>
+            <div>
+                Upload progress:
+                <div class="progress" style="">
+                    <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
+                </div>
+            </div>
+         </div>
+
+         <div class="imported-list">
+            <div class="item" ng-repeat="transaction in importedTransactions track by $index">
+               <div class="row">
+                  <div class="col-xs-5">
+                    <div>
+                      {{ transaction.original.description }}
+                      {{ transaction.original.value }}
+                    </div>
+                    <div>
+                      {{ transaction.original.date }}
+                    </div>
+                  </div>
+                  <div class="col-xs-2">
+                    <a class="btn" title="Importar" ng-click="importItem(transaction, $index)"><i class="fa fa-check"></i></a>
+                    <a class="btn" title="Dispensar" ng-click="removeItem($index)"><i class="fa fa-close"></i></a>      
+                  </div>
+                  
+                  <div class="col-xs-5">
+                    <div ng-hide="transaction.found">
+                      <span>Registro não encontrado no servidor</span>
+                    </div>
+                    <div ng-show="transaction.found">
+                      <div>
+                        {{ transaction.found.description }}
+                        {{ transaction.found.value }}
+                      </div>
+                      <div>
+                        {{ transaction.found.date }}
+                      </div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+
+  </div>
+</div>

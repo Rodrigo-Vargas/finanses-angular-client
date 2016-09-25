@@ -1,0 +1,39 @@
+<div ng-include src="'views/header.html'"></div>
+
+<div class="row">
+  <div class="col-xs-3">
+    <div ng-include src="'views/sidenav.html'"></div>    
+  </div>
+  <div class="col-xs-9">
+    <div class="content">
+      <div class="commands-wrapper">
+        <a class="btn btn-primary" ng-click="addCategory()">Adicionar</a>  
+      </div>
+
+      <div class="categories-list">
+        <div class="item" ng-repeat="category in categories track by category.id">
+          <div class="row">
+            <div class="col-xs-1">
+              <div class="color-cicle" style="background-color: {{ category.color }}"></div>
+            </div>
+            <div class="col-xs-9">
+              <span>{{ category.name }}</span>
+            </div>
+
+            <div class="col-xs-2">
+              <a class="btn btn-success icon" ng-click="editCategory(category)"><i class="fa fa-pencil"></i></a>  
+              <a class="btn btn-danger icon" ng-click="destroyCategory(category.id)"><i class="fa fa-trash"></i></a>  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="no-categories" ng-show="categories.length == 0">
+        <span>Nenhuma categoria cadastrada</span>
+      </div>
+
+      <rvg-modal control="modalControl" template-url="addCategoryTemplate.html"></rvg-modal> 
+
+    </div>
+  </div>
+</div>

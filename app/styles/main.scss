@@ -1,0 +1,151 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "loading.scss";
+@import "font-awesome.scss";
+
+
+body {
+  background-color: #EAEAEA;
+}
+
+header {
+  background-color: #888;
+}
+
+aside {
+  margin-left: -15px;
+}
+
+.gutter-20.row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.gutter-10.row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.gutter-0.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"]{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Login */
+.form-container {
+  background-color: #fff;
+  padding: 50px 30px;
+  margin: 200px auto;
+  width: 400px;
+}
+
+.form-container a {
+  text-align: center;
+}
+
+.server-message {
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.server-message span {
+  color: red;
+}
+
+/* Transations */
+
+.content {
+  padding-top: 25px;
+}
+
+.commands-wrapper {
+  margin: 10px;
+}
+
+.imported-list .item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.transaction-list {
+  margin: 10px 0;
+}
+
+.transaction-list .item{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 5px;
+}
+
+.icon {
+  color: #fff;
+}
+
+.side-nav {
+  background-color: #ddd;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.side-nav li {
+  border-bottom: 1px solid #888;
+  margin: 0px;
+}
+
+.side-nav a, .side-nav a:focus {
+  color: #444;
+  display: block;
+  padding: 20px 10px;
+  text-decoration: none;
+}
+
+.side-nav a:hover {
+  background-color: #169a01;
+  color: #eee;
+}
+
+/* Color Picker */
+.color-picker {
+  width: 400px;
+}
+
+.color-picker .input {
+  border: 1px solid #ccc;
+  height: 35px;
+  width: 100px;
+}
+
+.pallete .color {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+}
+
+.color-cicle {
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+}
